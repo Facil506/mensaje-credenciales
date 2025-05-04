@@ -6,7 +6,7 @@ function generarMensaje() {
   const clave = document.getElementById("clave").value;
   const fecha = document.getElementById("fecha").value;
 
-  const mensaje = `¡Estimado/a cliente!\n\nLos datos de acceso para tu servicio de [${servicio}] son:\n\nCuenta: ${cuenta}\nPerfil: ${perfil}\nPIN: ${pin}\nClave de la cuenta: ${clave}\nFecha de vencimiento: ${fecha}\n\nPor favor, recuerda que estas credenciales son de uso personal y no deben compartirse. Si tienes alguna duda o necesitas soporte, estamos para servirte.\n\n¡Gracias por su preferencia y que disfrutes el servicio!`;
+  const mensaje = `¡Estimado/a cliente!\n\nLos datos de acceso para tu servicio de [${servicio}] son:\n\nCuenta: ${cuenta}\nContraseña: ${clave}\nPerfil: ${perfil}\nPIN: ${pin}\nFecha de vencimiento: ${fecha}\n\nPor favor, recuerda que estas credenciales son de uso exclusivo para un dispositivo y no deben compartirse. Si tienes alguna duda o necesitas soporte, estamos para servirte.\n\n¡Gracias por su preferencia y que disfrutes el servicio!`;
 
   document.getElementById("mensajeGenerado").value = mensaje;
 }
