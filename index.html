@@ -12,16 +12,11 @@
     <form id="formulario">
       <label>
         Servicio:
-        <select id="servicio">
+        <select id="servicio" onchange="actualizarServicio()">
           <option disabled selected value="">Selecciona un servicio</option>
-          <option>Netflix</option>
-          <option>Disney+</option>
-          <option>Spotify</option>
-          <option>HBO Max</option>
-          <option>Prime Video</option>
-          <option>YouTube Premium</option>
-          <option>Paramount</option>
-          <option>VIX</option>
+          <option value="Netflix">Netflix</option>
+          <option value="Disney+">Disney+</option>
+          <option value="Spotify">Spotify</option>
         </select>
       </label>
 
@@ -29,9 +24,6 @@
         Correo de la cuenta:
         <select id="correo" onchange="actualizarClave()">
           <option disabled selected value="">Selecciona un correo</option>
-          <option value="cuenta1@facil.net">cuenta1@facil.net</option>
-          <option value="cuenta2@facil.net">cuenta2@facil.net</option>
-          <option value="cuenta3@facil.net">cuenta3@facil.net</option>
         </select>
       </label>
 
@@ -44,13 +36,6 @@
         Perfil:
         <select id="perfil" onchange="actualizarPin()">
           <option disabled selected value="">Selecciona un perfil</option>
-          <option>Perfil1</option>
-          <option>Perfil2</option>
-          <option>Perfil3</option>
-          <option>Perfil4</option>
-          <option>Perfil5</option>
-          <option>Perfil6</option>
-          <option>Perfil7</option>
         </select>
       </label>
 
