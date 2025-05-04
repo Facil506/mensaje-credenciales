@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Mensajes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Mensajes para Clientes</h1>
+
+    <form id="formulario">
+      <label>Servicio:
+        <input type="text" id="servicio" placeholder="Netflix" required>
+      </label>
+      <label>Correo de la cuenta:
+        <input type="email" id="cuenta" placeholder="cuenta@correo.com" required>
+      </label>
+      <label>Perfil:
+        <input type="text" id="perfil" placeholder="Perfil1">
+      </label>
+      <label>PIN:
+        <input type="text" id="pin" placeholder="0000">
+      </label>
+      <label>Clave:
+        <input type="text" id="clave" placeholder="Clave1234">
+      </label>
+      <label>Fecha de vencimiento:
+        <input type="date" id="fecha" required>
+      </label>
+
+      <button type="button" onclick="generarMensaje()">Generar mensaje</button>
+    </form>
+
+    <textarea id="mensajeGenerado" rows="10" readonly placeholder="Aquí aparecerá tu mensaje..."></textarea>
+    <button onclick="copiarMensaje()">Copiar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
