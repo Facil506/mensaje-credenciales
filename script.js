@@ -1,4 +1,4 @@
-// Relación de correos con su contraseña fija
+// Relación fija de correos con sus contraseñas
 const clavesPorCorreo = {
   "cuenta1@facil.net": "ClaveCuenta1",
   "cuenta2@facil.net": "ClaveCuenta2",
@@ -6,12 +6,14 @@ const clavesPorCorreo = {
   "cuenta8@facil.net": "Netflix800"
 };
 
+// Rellenar la clave automáticamente según el correo seleccionado
 function actualizarClave() {
   const correoSeleccionado = document.getElementById("cuenta").value;
   const clave = clavesPorCorreo[correoSeleccionado] || "";
   document.getElementById("clave").value = clave;
 }
 
+// Generar el mensaje final
 function generarMensaje() {
   const servicio = document.getElementById("servicio").value;
   const cuenta = document.getElementById("cuenta").value;
@@ -25,10 +27,11 @@ function generarMensaje() {
   document.getElementById("mensajeGenerado").value = mensaje;
 }
 
+// Copiar al portapapeles
 function copiarMensaje() {
   const mensaje = document.getElementById("mensajeGenerado");
   mensaje.select();
-  mensaje.setSelectionRange(0, 99999); // Para móviles
+  mensaje.setSelectionRange(0, 99999);
   document.execCommand("copy");
   alert("¡Mensaje copiado!");
 }
