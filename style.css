@@ -59,7 +59,7 @@ textarea {
   min-height: 120px;
 }
 
-/* Responsive para pantallas pequeñas */
+/* Responsive */
 @media (max-width: 768px) {
   .container {
     padding: 16px;
