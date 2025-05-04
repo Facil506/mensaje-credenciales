@@ -4,10 +4,26 @@ const claves = {
   "cuenta3@facil.net": "ClaveCuenta3"
 };
 
+const pines = {
+  "Perfil1": "1234",
+  "Perfil2": "2345",
+  "Perfil3": "3456",
+  "Perfil4": "4567",
+  "Perfil5": "5678",
+  "Perfil6": "6789",
+  "Perfil7": "7890"
+};
+
 function actualizarClave() {
   const correo = document.getElementById("correo").value;
   const clave = claves[correo] || "";
   document.getElementById("clave").value = clave;
+}
+
+function actualizarPin() {
+  const perfil = document.getElementById("perfil").value;
+  const pin = pines[perfil] || "";
+  document.getElementById("pin").value = pin;
 }
 
 function generarMensaje() {
@@ -17,6 +33,11 @@ function generarMensaje() {
   const perfil = document.getElementById("perfil").value;
   const pin = document.getElementById("pin").value;
   const fecha = document.getElementById("fecha").value;
+
+  if (!servicio || !correo || !clave || !perfil || !pin || !fecha) {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
 
   const mensaje = `¡Estimado/a cliente!\n\n` +
     `Los datos de acceso para tu servicio de [${servicio}] son:\n\n` +
@@ -39,5 +60,7 @@ function copiarMensaje() {
   alert("Mensaje copiado al portapapeles.");
 }
 
-// Cargar clave inicial al iniciar la página
-document.addEventListener("DOMContentLoaded", actualizarClave);
+document.addEventListener("DOMContentLoaded", () => {
+  actualizarClave();
+  actualizarPin();
+});
