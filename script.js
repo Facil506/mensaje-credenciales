@@ -20,13 +20,19 @@ function actualizarClave() {
   document.getElementById("clave").value = clave;
 }
 
-function actualizarPin() {
-  const perfil = document.getElementById("perfil").value;
-  const pin = pines[perfil] || "";
-  document.getElementById("pin").value = pin;
+function actualizarPin(forzado = false) {
+  const perfilSelect = document.getElementById("perfil");
+  const perfil = perfilSelect.value;
+
+  if (forzado || perfilSelect.selectedIndex !== 0) {
+    const pin = pines[perfil] || "";
+    document.getElementById("pin").value = pin;
+  }
 }
 
 function generarMensaje() {
+  actualizarPin(true); // Fuerza actualización del PIN al generar mensaje
+
   const servicio = document.getElementById("servicio").value;
   const correo = document.getElementById("correo").value;
   const clave = document.getElementById("clave").value;
@@ -59,8 +65,3 @@ function copiarMensaje() {
   document.execCommand("copy");
   alert("Mensaje copiado al portapapeles.");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  actualizarClave();
-  actualizarPin();
-});
