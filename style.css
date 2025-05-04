@@ -59,6 +59,7 @@ textarea {
   min-height: 120px;
 }
 
+/* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .container {
     padding: 16px;
@@ -82,5 +83,31 @@ textarea {
 
   button {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px;
   }
 }
