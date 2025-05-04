@@ -1,61 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fácil</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Fácil</h1>
+<!-- ...dentro del formulario en index.html... -->
 
-    <form id="formulario">
-      <label>Servicio:
-        <select id="servicio" required>
-          <option value="Netflix">Netflix</option>
-          <option value="Disney+">Disney+</option>
-          <option value="Spotify">Spotify</option>
-          <option value="YouTube Premium">YouTube Premium</option>
-          <option value="Prime Video">Prime Video</option>
-          <option value="Paramount">Paramount</option>
-          <option value="VIX">VIX</option>
-          <option value="MAX">MAX</option>
-        </select>
-      </label>
+<label>Correo de la cuenta:
+  <select id="cuenta" onchange="actualizarClave()" required>
+    <option value="cuenta1@facil.net">cuenta1@facil.net</option>
+    <option value="cuenta2@facil.net">cuenta2@facil.net</option>
+    <option value="cuenta3@facil.net">cuenta3@facil.net</option>
+    <option value="cuenta8@facil.net">cuenta8@facil.net</option>
+  </select>
+</label>
 
-      <label>Correo de la cuenta:
-        <select id="cuenta" required>
-          <option value="cuenta1@facil.net">cuenta1@facil.net</option>
-          <option value="cuenta2@facil.net">cuenta2@facil.net</option>
-          <option value="cuenta3@facil.net">cuenta3@facil.net</option>
-          <option value="cuenta8@facil.net">cuenta8@facil.net</option>
-        </select>
-      </label>
+<label>Contraseña:
+  <input type="text" id="clave" readonly>
+</label>
 
-      <label>Contraseña:
-        <input type="text" id="clave" placeholder="Clave1234" required>
-      </label>
-
-      <label>Perfil:
-        <input type="text" id="perfil" placeholder="Perfil1">
-      </label>
-
-      <label>PIN:
-        <input type="text" id="pin" placeholder="0000">
-      </label>
-
-      <label>Fecha de vencimiento:
-        <input type="date" id="fecha" required>
-      </label>
-
-      <button type="button" onclick="generarMensaje()">Generar mensaje</button>
-    </form>
-
-    <textarea id="mensajeGenerado" rows="10" readonly placeholder="Aquí aparecerá tu mensaje..."></textarea>
-    <button onclick="copiarMensaje()">Copiar</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<label>Perfil:
+  <select id="perfil">
+    <option value="Perfil1">Perfil1</option>
+    <option value="Perfil2">Perfil2</option>
+    <option value="Perfil3">Perfil3</option>
+    <option value="Perfil4">Perfil4</option>
+    <option value="Perfil5">Perfil5</option>
+    <option value="Perfil6">Perfil6</option>
+    <option value="Perfil7">Perfil7</option>
+  </select>
+</label>
