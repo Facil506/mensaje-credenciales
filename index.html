@@ -3,29 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Generador de Mensajes</title>
+  <title>Fácil</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Generador de Mensajes para Clientes</h1>
+    <h1>Fácil</h1>
 
     <form id="formulario">
       <label>Servicio:
-        <input type="text" id="servicio" placeholder="Netflix" required>
+        <select id="servicio" required>
+          <option value="Netflix">Netflix</option>
+          <option value="Disney+">Disney+</option>
+          <option value="Spotify">Spotify</option>
+          <option value="YouTube Premium">YouTube Premium</option>
+          <option value="Prime Video">Prime Video</option>
+          <option value="Paramount">Paramount</option>
+          <option value="VIX">VIX</option>
+          <option value="MAX">MAX</option>
+        </select>
       </label>
+
       <label>Correo de la cuenta:
-        <input type="email" id="cuenta" placeholder="cuenta@correo.com" required>
+        <select id="cuenta" required>
+          <option value="cuenta1@facil.net">cuenta1@facil.net</option>
+          <option value="cuenta2@facil.net">cuenta2@facil.net</option>
+          <option value="cuenta3@facil.net">cuenta3@facil.net</option>
+          <option value="cuenta8@facil.net">cuenta8@facil.net</option>
+        </select>
       </label>
+
+      <label>Contraseña:
+        <input type="text" id="clave" placeholder="Clave1234" required>
+      </label>
+
       <label>Perfil:
         <input type="text" id="perfil" placeholder="Perfil1">
       </label>
+
       <label>PIN:
         <input type="text" id="pin" placeholder="0000">
       </label>
-      <label>Clave:
-        <input type="text" id="clave" placeholder="Clave1234">
-      </label>
+
       <label>Fecha de vencimiento:
         <input type="date" id="fecha" required>
       </label>
