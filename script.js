@@ -1,3 +1,14 @@
+// Relación de correos con su contraseña fija
+const clavesPorCorreo = {
+  "cuenta13@facil.net": "Netflix013",
+};
+
+function actualizarClave() {
+  const correoSeleccionado = document.getElementById("cuenta").value;
+  const clave = clavesPorCorreo[correoSeleccionado] || "";
+  document.getElementById("clave").value = clave;
+}
+
 function generarMensaje() {
   const servicio = document.getElementById("servicio").value;
   const cuenta = document.getElementById("cuenta").value;
