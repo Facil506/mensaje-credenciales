@@ -1,37 +1,43 @@
-// Relación fija de correos con sus contraseñas
-const clavesPorCorreo = {
+const claves = {
   "cuenta1@facil.net": "ClaveCuenta1",
   "cuenta2@facil.net": "ClaveCuenta2",
-  "cuenta3@facil.net": "ClaveCuenta3",
-  "cuenta8@facil.net": "Netflix800"
+  "cuenta3@facil.net": "ClaveCuenta3"
 };
 
-// Rellenar la clave automáticamente según el correo seleccionado
 function actualizarClave() {
-  const correoSeleccionado = document.getElementById("cuenta").value;
-  const clave = clavesPorCorreo[correoSeleccionado] || "";
+  const correo = document.getElementById("correo").value;
+  const clave = claves[correo] || "";
   document.getElementById("clave").value = clave;
 }
 
-// Generar el mensaje final
 function generarMensaje() {
   const servicio = document.getElementById("servicio").value;
-  const cuenta = document.getElementById("cuenta").value;
+  const correo = document.getElementById("correo").value;
+  const clave = document.getElementById("clave").value;
   const perfil = document.getElementById("perfil").value;
   const pin = document.getElementById("pin").value;
-  const clave = document.getElementById("clave").value;
   const fecha = document.getElementById("fecha").value;
 
-  const mensaje = `¡Estimado/a cliente!\n\nLos datos de acceso para tu servicio de [${servicio}] son:\n\nCuenta: ${cuenta}\nContraseña: ${clave}\nPerfil: ${perfil}\nPIN: ${pin}\nFecha de vencimiento: ${fecha}\n\nPor favor, recuerda que estas credenciales son de uso exclusivo para un dispositivo y no deben compartirse. Si tienes alguna duda o necesitas soporte, estamos para servirte.\n\n¡Gracias por su preferencia y que disfrutes el servicio!`;
+  const mensaje = `¡Estimado/a cliente!\n\n` +
+    `Los datos de acceso para tu servicio de [${servicio}] son:\n\n` +
+    `Cuenta: ${correo}\n` +
+    `Contraseña: ${clave}\n` +
+    `Perfil: ${perfil}\n` +
+    `PIN: ${pin}\n` +
+    `Fecha de vencimiento: ${fecha}\n\n` +
+    `Por favor, recuerda que estas credenciales son de uso exclusivo para un dispositivo y no deben compartirse. ` +
+    `Si tienes alguna duda o necesitas soporte, estamos para servirte.\n\n` +
+    `¡Gracias por su preferencia y que disfrutes el servicio!`;
 
-  document.getElementById("mensajeGenerado").value = mensaje;
+  document.getElementById("mensaje").value = mensaje;
 }
 
-// Copiar al portapapeles
 function copiarMensaje() {
-  const mensaje = document.getElementById("mensajeGenerado");
+  const mensaje = document.getElementById("mensaje");
   mensaje.select();
-  mensaje.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  alert("¡Mensaje copiado!");
+  alert("Mensaje copiado al portapapeles.");
 }
+
+// Cargar clave inicial al iniciar la página
+document.addEventListener("DOMContentLoaded", actualizarClave);
