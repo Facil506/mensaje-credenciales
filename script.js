@@ -1,6 +1,9 @@
 // Relación de correos con su contraseña fija
 const clavesPorCorreo = {
-  "cuenta13@facil.net": "Netflix013",
+  "cuenta1@facil.net": "ClaveCuenta1",
+  "cuenta2@facil.net": "ClaveCuenta2",
+  "cuenta3@facil.net": "ClaveCuenta3",
+  "cuenta8@facil.net": "Netflix800"
 };
 
 function actualizarClave() {
