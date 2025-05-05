@@ -1,41 +1,30 @@
 const servicios = {
   "Netflix": {
     cuentas: {
-      "netflix1@facil.net": "Netflix123",
-      "netflix2@facil.net": "Netflix456"
+      "cuenta13@facil.net.in": "Netflix113"
     },
     perfiles: {
-      "Perfil1": "1234",
-      "Perfil2": "2345",
-      "Perfil3": "3456",
-      "Perfil4": "4567",
+      "Perfil1": "1245",
+      "Perfil2": "1289",
+      "Perfil3": "1274",
+      "Perfil4": "1294",
       "Perfil5": "5678"
     }
   },
   "Disney+": {
     cuentas: {
-      "disney1@facil.net": "Disney123",
-      "disney2@facil.net": "Disney456"
+      
     },
     perfiles: {
-      "Perfil1": "1111",
-      "Perfil2": "2222",
-      "Perfil3": "3333",
-      "Perfil4": "4444",
-      "Perfil5": "5555",
-      "Perfil6": "6666",
-      "Perfil7": "7777"
+      
     }
   },
   "Spotify": {
     cuentas: {
-      "spotify1@facil.net": "Spotify123",
-      "spotify2@facil.net": "Spotify456"
+     
     },
     perfiles: {
-      "Perfil1": "0001",
-      "Perfil2": "0002",
-      "Perfil3": "0003"
+     
     }
   }
 };
